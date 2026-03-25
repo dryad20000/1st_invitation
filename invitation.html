@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신비 첫 돌잔치 💕</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 20px; background: linear-gradient(to bottom, #ffeef8, #f0f8ff); color: #333; text-align: center; }
+        h1 { font-size: 2.5em; color: #ff69b4; margin: 20px 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.1); }
+        .info { background: white; margin: 20px auto; padding: 20px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); max-width: 400px; }
+        .info h2 { color: #ff1493; font-size: 1.5em; }
+        .info p { font-size: 1.2em; margin: 10px 0; }
+        @media (max-width: 480px) {
+          .info h2, .info p { font-size: 1em; } /* 모바일 폰트 조정 */
+        }
+        iframe { width: 100%; height: 300px; border: none; border-radius: 15px; margin: 20px 0; }
+        .photos {  display: flex;
+                overflow-x: auto; 
+                overflow-y: hidden; 
+                scroll-snap-type: x mandatory; 
+                -webkit-overflow-scrolling: touch;
+                gap: 15px; 
+                padding: 20px 10px; 
+                scrollbar-width: none; /* Firefox */ 
+                -ms-overflow-style: none; /* IE/Edge */
+                }
+        .photos::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+        .photos img { flex: 0 0 85%; /* 한 장 크기 80% 고정 */ 
+                    height: 300px; 
+                    object-fit: cover; 
+                    border-radius: 15px; 
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+                    scroll-snap-align: center; 
+                    transition: transform 0.3s;
+                    }
+        .photos img:hover { transform: scale(1.02); }
+    </style>
+</head>
+<body>
+    <h1>신비 첫 번째 돌잔치 💕🎉</h1>
+    
+    <div class="info">
+        <h2>📅 일시</h2>
+        <p>2026년 4월 12일 (일) 오후 1:00</p>
+        
+        <h2>📍 장소</h2>
+        <p>마키노차야 세종점</p>
+        <p>주소: 세종 도움1로 7 베스트웨스턴플러스호텔 3층</p>
+        
+        <h2>👶 1년 성장 사진 모음 💕</h2>
+        <div class="photos">
+            <img src="images/invitation_img01.jpg" alt="img01">
+            <img src="images/invitation_img02.jpg" alt="img02">
+            <img src="images/invitation_img03.jpg" alt="img03">
+            <img src="images/invitation_img04.jpg" alt="img04">
+            <img src="images/invitation_img05.jpg" alt="img05">
+            <img src="images/invitation_img06.jpg" alt="img06">
+            <img src="images/invitation_img07.jpg" alt="img07">
+            <img src="images/invitation_img08.jpg" alt="img08">
+            <img src="images/invitation_img09.jpg" alt="img09">
+            <img src="images/invitation_img10.jpg" alt="img10">
+        </div>
+        
+        <h2>🗺️ 찾아오는 길</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3207.232287808512!2d127.25843629999999!3d36.5002545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357acbba6303d7f7%3A0x4a77f5320699bb5c!2z67Kg7Iqk7Yq47Juo7Iqk7YS07ZSM65-s7Iqk7Zi47YWU7IS47KKF!5e0!3m2!1sko!2skr!4v1774412616726!5m2!1sko!2skr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+</body>
+</html>

@@ -128,6 +128,20 @@
     document.getElementById('passcode').addEventListener('keypress', function(e) {
       if (e.key === 'Enter') checkPassword();
     });
+
+    // 3. 우클릭·드래그·단축키 완전 차단
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('selectstart', e => e.preventDefault());
+    document.addEventListener('dragstart', e => e.preventDefault());
+    document.onkeydown = e => {
+      if(e.keyCode==123 || e.ctrlKey && e.shiftKey && e.keyCode==73) return false;
+    };
+    
+    // 4. 이미지 저장 방지
+    document.querySelectorAll('img').forEach(img => {
+      img.ondragstart = () => false;
+      img.oncontextmenu = () => false;
+    });
     </script>
 </body>
 </html>

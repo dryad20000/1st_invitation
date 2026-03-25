@@ -14,25 +14,24 @@
           .info h2, .info p { font-size: 1em; } /* 모바일 폰트 조정 */
         }
         iframe { width: 100%; height: 300px; border: none; border-radius: 15px; margin: 20px 0; }
-        .photos {  display: flex;
-                overflow-x: auto; 
-                overflow-y: hidden; 
-                scroll-snap-type: x mandatory; 
-                -webkit-overflow-scrolling: touch;
-                gap: 15px; 
-                padding: 20px 10px; 
-                scrollbar-width: none; /* Firefox */ 
-                -ms-overflow-style: none; /* IE/Edge */
-                }
-        .photos::-webkit-scrollbar { display: none; } /* Chrome/Safari */
-        .photos img { flex: 0 0 85%; /* 한 장 크기 80% 고정 */ 
-                    height: 300px; 
-                    object-fit: cover; 
-                    border-radius: 15px; 
-                    box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
-                    scroll-snap-align: center; 
-                    transition: transform 0.3s;
-                    }
+        .photos {
+          display: flex;
+          overflow-x: auto;
+          overflow-y: hidden;
+          scroll-snap-type: x mandatory;
+          gap: 15px;
+          padding: 20px 10px;
+          scrollbar-width: none;
+        }
+        .photos::-webkit-scrollbar { display: none; }
+        .photos img {
+          flex: 0 0 80%;
+          max-width: 280px;
+          height: 250px;
+          object-fit: cover;
+          border-radius: 15px;
+          scroll-snap-align: center;
+        }
         .photos img:hover { transform: scale(1.02); }
         /* 1. 이미지 복사 완전 차단 */
         img {
@@ -47,7 +46,7 @@
           -ms-user-select: none;
           user-select: none;
         }
-        
+
         /* 2. 개발자도구 우회 방지 */
         body::before {
           content: "💕 가족만 볼 수 있는 돌잔치 초대장 💕";
@@ -69,6 +68,14 @@
         @media (max-width: 768px) { 
           body::before { display: none; } /* 모바일은 표시 안함 */
         }
+        
+        /* 🔥 PC(데스크톱)에서만 가로 스크롤 */
+        @media screen and (min-width: 769px) {
+          .photos {
+            overflow-x: auto;  /* PC: 가로 스크롤 활성화 */
+          }
+        }
+
     </style>
 </head>
 <body>
@@ -96,11 +103,11 @@
             
             <h2>👶 1년 성장 사진 모음 💕</h2>
             <div class="photos">
+                <img src="images/invitation_img05.jpg" alt="img05">
                 <img src="images/invitation_img01.jpg" alt="img01">
                 <img src="images/invitation_img02.jpg" alt="img02">
                 <img src="images/invitation_img03.jpg" alt="img03">
                 <img src="images/invitation_img04.jpg" alt="img04">
-                <img src="images/invitation_img05.jpg" alt="img05">
                 <img src="images/invitation_img06.jpg" alt="img06">
                 <img src="images/invitation_img07.jpg" alt="img07">
                 <img src="images/invitation_img08.jpg" alt="img08">
